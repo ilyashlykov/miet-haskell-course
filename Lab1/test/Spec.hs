@@ -2,6 +2,7 @@ import FirstSteps
 import Lists
 import Luhn
 import Test.Hspec
+import Data.Bool (Bool(True))
 
 main :: IO ()
 main = hspec $ do
@@ -40,6 +41,8 @@ main = hspec $ do
             coprime (-8) 10 `shouldBe` False
             coprime 17 19 `shouldBe` True
             coprime 14 27  `shouldBe` True
+            --coprime (-1) (-1)  `shouldBe` True
+            coprime (-1) (-4)  `shouldBe` True
     describe "lists" $ do
         it "distance" $ do
             distance (Point [0.0, 0.0]) (Point [0.0, 1.0]) `shouldBe` 1.0
